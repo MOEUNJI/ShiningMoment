@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box {
+        width: 711px;
+        height: 550px;
+        overflow: hidden;
+    }
+
+    .slider-box {
+        padding: 0;
+        width: 711px;
+        height: 550px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .img-box {
+        position: absolute;
+        width: 2844px;
+        height: 550px;
+        display: flex;
+        transition: 0.3s;
+        padding: 0;
+        opacity: 0;
+    }
+    
+    .img-box>li {
+        width: 711px;
+        height: 550px;
+        overflow: hidden;
+    }
+
+    .img-box>li>img {
+        width: 711px;
+        height: 550px;
+        overflow: hidden;
+    }
+
+    .keword-btn {
+        color: rgb(97, 97, 97);
+    }
+
+    .on {
+        color: #121212;
+    }
+
+    .img-box.active {
+        opacity: 1;
+    }
+
+</style>
+
+<body>
+    <div class="keword-container">
+        <ul class="btn-box">
+            <li class="on">
+                <button class="keword-btn">
+                    <span class="keword">Wedding</span>
+                    <span class="keword-sub-text">자연에서,이색적인 웨딩사진</span>
+                    <span class="ilne2"></span>
+                </button>
+            </li>
+            <li>
+                <button class="keword-btn">
+                    <span class="keword">Family</span>
+                    <span class="keword-sub-text">가족과의 특별한 사진</span>
+                    <span class="ilne2"></span>
+                </button>
+            </li>
+            <li>
+                <button class="keword-btn">
+                    <span class="keword">Friend</span>
+                    <span class="keword-sub-text">친구와의 추억사진</span>
+                    <span class="ilne2"></span>
+                </button>
+            </li>
+            <li>
+                <button class="keword-btn">
+                    <span class="keword">Pet</span>
+                    <span class="keword-sub-text">반려동물의 순간을 담은 사진</span>
+                    <span class="ilne2"></span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <div class="slider-box">
+            <ul class="img-box">
+                <li>
+                    <img src="./images/keword_wedding1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_wedding2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_wedding3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_wedding4.jpg" alt="">
+                </li>
+            </ul>
+            <ul class="img-box">
+                <li>
+                    <img src="./images/keword_family1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_family2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_family3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_family4.jpg" alt="">
+                </li>
+            </ul>
+            <ul class="img-box">
+                <li>
+                    <img src="./images/keword_friend1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_friend2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_friend3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_friend4.jpg" alt="">
+                </li>
+            </ul>
+            <ul class="img-box">
+                <li>
+                    <img src="./images/keword_pet1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_pet2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_pet3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/keword_pet4.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        const box = document.querySelector('.box');
+        const imgBox = document.getElementsByClassName('img-box');
+        let sliderWidth = 711;
+
+
+        let keword = document.getElementsByClassName("keword-container")[0];
+        let kewordUl = keword.children[0];
+        let kewordLi = kewordUl.children;
+
+        let imgArea = document.getElementsByClassName("box")[0];
+        let imgAreaUl = imgArea.children[0];
+        let imgAreaLi = imgAreaUl.children;
+        
+
+
+        let num = 0;
+
+            for (let i = 0; i < kewordLi.length; i++) {
+                kewordLi[i].index = i;
+                
+                kewordLi[i].addEventListener("click", function (e) {
+                    e.preventDefault();
+                    num = e.currentTarget.index;
+                    
+                    for (let j = 0; j < kewordLi.length; j++) {
+                        if (j == num) {
+                            kewordLi[j].classList.add("on");
+                            imgAreaLi[j].classList.add("active");
+                        }
+                        
+                        else {
+                            kewordLi[j].classList.remove("on");
+                            imgAreaLi[j].classList.remove("active");
+                        }
+                }
+                
+            });
+        };
+
+
+        for (let i = 0 ; i < imgBox.length ; i++) {
+            makeSlider(i);
+        }
+
+
+        function makeSlider(number) {
+
+            let index = 0;
+            setInterval(() => {
+                slide();
+            }, 3000);
+            
+            
+            
+            function slide() {
+                if (index === 3)
+                index = -1;
+                index++;
+                // imgBox.style.trasnform =`translateX(-${index * sliderWidth}px)`;
+                imgBox[number].style.transform = 'translateX(-' + index * sliderWidth + 'px)';
+                // box.innerText = index;
+            }
+        }
+            
+    </script>
+    </body>
+    
+    </html>
