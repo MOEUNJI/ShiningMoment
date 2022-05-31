@@ -28,20 +28,12 @@ const slider1 = document.querySelector('.slider1');
 
 
 let containerFirst = document.getElementsByClassName("expert-keword-container")[0];
-// container = 버튼들이 들어있는 ul
 let controller = containerFirst.children[0];
-// controller = 버튼들이 들어있는 ul의 첫번째 li
 let liList = controller.children;
 
 let textArea = document.getElementsByClassName("text-area")[0];
-// textArea = 텍스트들이 들어있는 ul
 let textAreaUl = textArea.children[0];
-// textAreaUl = 텍스트들이 들어있는 ul의 첫번째 li
 let textAreaLi = textAreaUl.children;
-
-
-
-
 
 let n = 0;
 
@@ -67,46 +59,69 @@ for (let i = 0; i < liList.length; i++) {
 
 
 
+// -----------------------section3---------------------------------
 
 
+        const box = document.querySelector('.box');
+        const imgBox = document.getElementsByClassName('img-box');
+        let sliderWidth = 711;
 
-let containerFirst2 = document.getElementsByClassName("keword-container")[0];
-// container = 버튼들이 들어있는 ul
-let controller2 = containerFirst2.children[0];
-// controller = 버튼들이 들어있는 ul의 첫번째 li
-let liList2 = controller2.children;
+        let keword = document.getElementsByClassName("keword-container")[0];
+        let kewordUl = keword.children[0];
+        let kewordLi = kewordUl.children;
 
-let textArea2 = document.getElementsByClassName("text-area2")[0];
-// textArea = 텍스트들이 들어있는 ul
-let textAreaUl2 = textArea2.children[0];
-// textAreaUl = 텍스트들이 들어있는 ul의 첫번째 li
-let textAreaLi2 = textAreaUl2.children;
-
+        let imgArea = document.getElementsByClassName("box")[0];
+        let imgAreaUl = imgArea.children[0];
+        let imgAreaLi = imgAreaUl.children;
         
-
         let num = 0;
 
-            for (let i = 0; i < liList2.length; i++) {
-                liList2[i].index = i;
+            for (let i = 0; i < kewordLi.length; i++) {
+                kewordLi[i].index = i;
                 
-                liList2[i].addEventListener("click", function (e) {
+                kewordLi[i].addEventListener("click", function (e) {
                     e.preventDefault();
                     num = e.currentTarget.index;
                     
-                    for (let j = 0; j < liList2.length; j++) {
+                    for (let j = 0; j < kewordLi.length; j++) {
                         if (j == num) {
-                            liList2[j].classList.add("on");
-                            textAreaLi2[j].classList.add("active");
+                            kewordLi[j].classList.add("on");
+                            imgAreaLi[j].classList.add("active");
                         }
                         
                         else {
-                            liList2[j].classList.remove("on");
-                            textAreaLi2[j].classList.remove("active");
+                            kewordLi[j].classList.remove("on");
+                            imgAreaLi[j].classList.remove("active");
                         }
                 }
                 
             });
         };
+
+        for (let i = 0 ; i < imgBox.length ; i++) {
+            makeSlider(i);
+        }
+
+        function makeSlider(number) {
+
+            let index = 0;
+            setInterval(() => {
+                slide();
+            }, 2000);
+                   
+            
+            function slide() {
+                if (index === 3)
+                index = -1;
+                index++;
+                // imgBox.style.trasnform =`translateX(-${index * sliderWidth}px)`;
+                imgBox[number].style.transform = 'translateX(-' + index * sliderWidth + 'px)';
+                // box.innerText = index;
+            }
+        }
+
+
+        // ----------------------드래그--------------
 
 
         const slider = document.querySelector('.items');

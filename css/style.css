@@ -248,75 +248,72 @@
     margin-top: 120px;
 }
 
+.keword-content-all {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 550px;
+    width: 1200px;
+    margin-top: 90px;
+}
+
 .keword-container {
     position: relative;
-    width: 1200px;
-    height: 550px;
-    margin: 90px auto 0 auto;
-}
-
-.controller2 {
-    background: #F3F3F3;
+    height: 487px;
     width: 488px;
-    height: 478px;
-    position: absolute;
-    right: 0;
-    transform: translateY(10%);
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    background: var(--back-color);
 }
 
-.controller2 li {
-    list-style: none;
-}
-
-.text-area2 {
+.box {
     width: 711px;
     height: 550px;
     overflow: hidden;
-    background: #fdfdfd;
-    position: absolute;
-    box-shadow: 8px 8px 15px #00000025;
 }
 
-.text-area2 ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 0;
+.slider-box {
     padding: 0;
     width: 711px;
     height: 550px;
-    transition: left 0.4s;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-box {
+    position: absolute;
+    width: 2844px;
+    height: 550px;
+    display: flex;
+    transition: 0.3s;
+    padding: 0;
+    opacity: 0;
+}
+
+.img-box>li {
+    width: 711px;
+    height: 550px;
     overflow: hidden;
 }
 
-.text-area2 li {
-    position: absolute;
-    top: 0;
-    left: 0;
+.img-box>li>img {
     width: 711px;
     height: 550px;
-    transition: 0.4s;
-    opacity: 0;
-    box-shadow: 8px 8px 15px #00000025;
-    list-style: none;
-    display: flex;
+    overflow: hidden;
 }
 
-.text-area2 li>img {
-    width: 711px;
-    height: 550px;
+.keword-btn {
+    color: rgb(97, 97, 97);
+    margin: 15px 0 15px 0;
 }
 
-.text-area2 li.active {
+.on {
+    color: #121212;
+}
+
+.img-box.active {
     opacity: 1;
-}
-
-.controller2>li {
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .keword-btn {
@@ -351,7 +348,7 @@
     transition: 0.3s;
 }
 
-.controller2 li.on button {
+.btn-box li.on button {
     color: var(--text-color);
 }
 
@@ -377,45 +374,10 @@
     color: #5d5d5d;
 }
 
-
-.text-area2 {
-    width: 711px;
-    height: 550px;
-    overflow: hidden;
-    /* position: absolute; */
-}
-
 .slider-box {
     padding: 0;
 }
 
-.img-box {
-    width: 2844px;
-    height: 550px;
-    display: flex;
-    transition: 0.3s;
-    padding: 0;
-}
-
-.img-box>li {
-    width: 711px;
-    height: 550px;
-    overflow: hidden;
-}
-
-.img-box>li>img {
-    width: 711px;
-    height: 550px;
-    overflow: hidden;
-}
-
-.keword-btn {
-    color: rgb(97, 97, 97);
-}
-
-.on {
-    color: #121212;
-}
 
 
 /* ----------------------Collaboration------------------------ */
@@ -554,6 +516,7 @@ body {
 .place-content {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 120px;
 }
 
 .place-right {
