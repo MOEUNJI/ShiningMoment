@@ -1,3 +1,20 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+.nanummyeongjo * {
+ font-family: 'Nanum Myeongjo', serif;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    font-family: 'Nanum Myeongjo';
+    font-weight: 600;
+}
+
 :root {
     --back-color: #F3F3F3;
     --text-color: #121212;
@@ -59,11 +76,15 @@
     margin-left: 5px;
     color: var(--white-text-color);
     font-size: 24px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .slider-main-text>p {
     color: var(--white-text-color);
     font-size: 18px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .slider-down-text {
@@ -111,6 +132,14 @@
 .sub-text {
     font-size: 21px;
     margin-bottom: 50px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+}
+
+
+.sub-text2 {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .line {
@@ -140,12 +169,14 @@
     outline: none;
     height: 217px;
     width: 280px;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--white-text-color);
     border: 1px solid var(--white-text-color);
     border-bottom: none;
     cursor: pointer;
     transition: 0.4s;
+    font-family: 'Nanum Myeongjo';
+    font-weight: 600;
 }
 
 .controller1 li>.expert-button:hover {
@@ -180,9 +211,6 @@
     padding: 197px 0 197px 203px;
 }
 
-.expert-li > p {
-}
-
 .expert-title {
     font-size: 60px;
     color: var(--white-text-color);
@@ -192,11 +220,15 @@
     font-size: 16px;
     margin-top: 20px;
     color: var(--white-text-color);
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .expert-explanation {
     margin-top: 90px;
     line-height: 22px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .expert-li.active {
@@ -224,10 +256,10 @@
 .background-text1 {
     font-size: 150px;
     position: absolute;
-    top: -15%;
-    transform: translateY(15%);
+    top: -12%;
+    transform: translateY(12%);
     right: 0;
-    color: #f6f6f6;
+    color: #f4f4f4;
     z-index: -9999;
 }
 
@@ -237,11 +269,9 @@
     left: 0;
     top: 25%;
     transform: translateY(-25%);
-    color: #f6f6f6;
+    color: #f4f4f4;
     z-index: -99999;
 }
-
-
 
 .keword-text {
     text-align: center;
@@ -306,6 +336,8 @@
 .keword-btn {
     color: rgb(97, 97, 97);
     margin: 15px 0 15px 0;
+    font-family: 'Nanum Myeongjo';
+    font-weight: 600;
 }
 
 .on {
@@ -426,6 +458,7 @@
     font-size: 50px;
     color: var(--text-color);
     margin-bottom: 62px;
+    margin-left: 15px;
 }
 
 .nopay-small-title {
@@ -433,11 +466,44 @@
     color: var(--text-color);
     width: 137px;
     margin-right: 37px;
+    margin-left: 15px;
     display: inline-block;
 }
 
 .text-box {
     margin-bottom: 25px;
+    height: 40px;
+}
+
+.text-box:before {
+    content: '';
+    display: block;
+    clear: both;
+    width: 0;
+    height: 1px;
+    background: #787878;
+    transition: 0.3s;
+    transform: translateY(50px);
+}
+
+.text-box:after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 1px;
+    height: 0;
+    transform: translateY(-100%);
+    background: #787878;
+    transition: 0.3s;
+}
+
+.text-box:hover:before {
+    width: 67px;
+    transform: translateY(-5px);
+}
+
+.text-box:hover:after {
+    height: 40px;
 }
 
 
@@ -544,6 +610,8 @@ body {
 
 .place-kr {
     margin-bottom: 5px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .Photo-spot-content {
@@ -562,6 +630,97 @@ body {
 
 
 
+
+
+.hover-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.hover {
+    position: relative;
+}
+
+.hover img {
+    width: 100%;
+    transition: all 0.6s ease 0.2s;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.hover figcaption {
+    position: absolute;
+    bottom: 0%; left: 0;
+    width: 100%;
+    padding: 5% 5% 0% 5%;
+    box-sizing: border-box;
+    z-index: 1;
+    line-height: 1.7em;
+    color: #fff;
+    font-size: 20px;
+    opacity:1;
+    transition: all 0.5s ease;
+}
+
+.hover figcaption h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 30px;
+    text-shadow: 2px 2px 5px var(--text-color);
+    font-family: 'Noto Sans KR';
+}
+
+.hover figcaption p {
+    font-weight: 200;
+}
+
+.hover .front {
+    position: absolute; left: 0; top: 0;
+    transform : rotateY(0deg);
+    cursor : pointer;
+    z-index: 10;
+    transition : transform 1s;
+    backface-visibility : hidden;
+}
+
+.hover .back {
+    position: absolute; left: 0; top: 0;
+    transform : rotateY(-180deg);
+    cursor : pointer;
+    transition : transform 1s;
+    backface-visibility : hidden;
+}
+
+.hover:hover .front {
+    transform : rotateY(180deg)
+}
+
+.hover:hover .back {
+    transform : rotateY(0);
+}
+
+.first {
+    width : 691px;
+    height : 350px;
+}
+
+.second {
+    width: 488px;
+    height: 350px;
+}
+
+.third {
+    width: 386px;
+    height: 482px;
+}
+
+.fourth {
+    width: 793px;
+    height: 482px;
+}
 
 footer {
     width: 100%;
@@ -585,6 +744,8 @@ footer {
     justify-content: space-between;
     font-size: 12px;
     margin-bottom: 35px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .footer-menu li a {
@@ -606,8 +767,15 @@ footer {
     margin-bottom: 30px;
 }
 
+.text-footer p {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+}
+
 .buisness {
     margin-bottom: 10px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
 }
 
 .buisness > span {
@@ -621,5 +789,29 @@ footer {
 
 .sns-footer > p {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 24px;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+}
+
+.to-bottom{
+    transform: translateY(200px);  
+}
+
+.to-left{
+    transform: translateX(-200px);
+}
+
+.to-right{
+    transform: translateX(200px);
+}
+
+.fade {
+    opacity: 0;
+    transition: 1s;
+}
+
+.in {
+    opacity: 1;
+    transform: none;
 }
