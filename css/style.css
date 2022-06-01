@@ -112,8 +112,12 @@ body {
 }
 
 .expert {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .expert-text {
@@ -158,6 +162,8 @@ body {
     height: 650px;
     position: relative;
     margin-top: 90px;
+    overflow: hidden;
+
 }
 
 .controller1 {
@@ -208,7 +214,8 @@ body {
     opacity: 0;
     color: var(--white-text-color);
     transition: 0.4s;
-    padding: 197px 0 197px 203px;
+    width: 919px;
+    position: absolute;
 }
 
 .expert-title {
@@ -239,6 +246,8 @@ body {
     top: 0;
     left: 0;
     z-index: -999;
+    position: absolute;
+    object-fit: cover;
 }
 
 /* -------------------------------------- */
@@ -290,9 +299,9 @@ body {
     position: relative;
     height: 487px;
     width: 488px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: var(--back-color);
 }
 
@@ -832,14 +841,26 @@ footer {
         width: 100%;
         margin: 0 32px;
     }
-    .expert-btns,
+
     .text-area,
-    .expert-btns {
+    .expert-btns,
+    .expert-li,
+    .in {
         width: 100%;
-    } 
-    .controller1 {
-        width: 269px;
     }
-    
+
+    .background-text1 {
+        font-size: 100px;
+        text-align: right;
+    }
+
+    .background-text2 {
+        font-size: 100px;
+    }
+
+    .keword-start {
+        width: 100%;
+        margin: 0 32px;
+    }
     
 }

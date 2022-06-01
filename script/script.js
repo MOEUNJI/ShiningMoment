@@ -64,9 +64,9 @@ const slider1 = document.querySelector('.slider1');
 
 
 
-let containerFirst = document.getElementsByClassName("expert-keword-container")[0];
-let controller = containerFirst.children[0];
-let liList = controller.children;
+let containerFirst = document.getElementsByClassName("controller1")[0];
+let controller = containerFirst.children;
+// let liList = controller.children;
 
 let textArea = document.getElementsByClassName("text-area")[0];
 let textAreaUl = textArea.children[0];
@@ -74,14 +74,14 @@ let textAreaLi = textAreaUl.children;
 
 let n = 0;
 
-for (let i = 0; i < liList.length; i++) {
-    liList[i].index = i;
+for (let i = 0; i < controller.length; i++) {
+    controller[i].index = i;
     
-    liList[i].addEventListener("click", function (e) {
+    controller[i].addEventListener("click", function (e) {
         e.preventDefault();
         n = e.currentTarget.index;
         
-        for (let j = 0; j < liList.length; j++) {
+        for (let j = 0; j < controller.length; j++) {
             if (j == n) {
                 textAreaLi[j].classList.add("active");
             }
