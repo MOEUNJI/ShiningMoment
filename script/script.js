@@ -107,7 +107,7 @@ for (let i = 0; i < controller.length; i++) {
         let kewordUl = keword.children[0];
         let kewordLi = kewordUl.children;
 
-        let imgArea = document.getElementsByClassName("box")[0];
+        let imgArea = document.getElementsByClassName("slider-box")[0];
         let imgAreaUl = imgArea.children[0];
         let imgAreaLi = imgAreaUl.children;
         
