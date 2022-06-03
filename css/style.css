@@ -35,6 +35,18 @@ body {
     transition: 1s;
 }
 
+.slider1-1 > img {
+    object-position: 70%;
+}
+
+.slider1-2 > img {
+    object-position: 5%;
+}
+
+.slider1-3 > img {
+    object-position: 55%;
+}
+
 .slider1 li {
     overflow: hidden;
     height: 100vh;
@@ -186,6 +198,10 @@ body {
     font-weight: 600;
 }
 
+.controller1 li > .Photographer-btn {
+    border-top: none;
+}
+
 .controller1 li>.expert-button:hover {
     background: rgba(0, 0, 0, 0.5);
 }
@@ -218,6 +234,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.expert-two-img {
+    object-position: 60%;
+}
+
+.text-wrapper {
+    max-width: 519px;
 }
 
 .expert-title {
@@ -754,7 +778,8 @@ body {
 footer {
     width: 100%;
     background: url(../images/footer-background.jpg);
-    height: 385px;
+    background-position: 35%;
+    height: 386px;
     display: flex;
 }   
 
@@ -982,10 +1007,104 @@ footer {
 
 @media (max-width: 960px) {
     .slider-main-text > h2 {
-        font-size: 50px;
+        font-size: 45px;
+        margin-top: 15px;
+    }
+
+    .slider-main-text > p,
+    .slider-main-text > span {
+        font-size: 14px;
+    }
+
+    .dot-text {
+        font-size: 24px;
     }
 
     .expert-title {
         font-size: 40px;
+    }
+    
+    .text-wrapper {
+        margin-left: 20px;
+        max-width: 305px;
+    }
+
+    .controller1 li > .expert-button {
+        width: 180px;
+        font-size: 18px;
+    }
+
+    .line2 {
+        width: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .expert,
+    .nopay-content,
+    .keword-start,
+    .Collaboration-area-text,
+    .Photo-spot-area,
+    .slider-text,
+    .items, 
+    .all-footer {
+        padding: 0 16px;
+    }
+
+    .slider-main-text > h2 {
+        font-size: 32px;
+    }
+
+    .expert-li {
+        height: 400px;
+        justify-content: center;
+    }
+    
+    .text-area {
+        width: 100%;
+    }
+    
+    .controller1 {
+        display: flex;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .controller1 li {
+        width: 100%;
+    }
+
+    .controller1 li > .expert-button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .controller1 li >.Photographer-btn {
+        border-top: 1px solid var(--white-text-color);
+        border-right: none;
+    }
+
+    .controller1 li > .expert-btn3 {
+        border-left: none;
+    }
+
+    .background-text1,
+    .background-text2 {
+        font-size: 60px;
+    }
+
+    .text-footer {
+        margin-top: 50px;
+    }
+
+    .all-footer {
+        display: block;
+    }
+
+    footer{
+        height: 450px;
     }
 }
