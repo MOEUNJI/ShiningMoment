@@ -638,6 +638,14 @@ body {
     margin-bottom: 120px;
 }
 
+.busan-jeju {
+    display: flex;
+}
+
+.goseong-andong {
+    display: flex;
+}
+
 .place-right {
     margin-left: 10px;
 }
@@ -680,10 +688,6 @@ body {
 .top-content {
     margin-bottom: 63px;
 }
-
-
-
-
 
 .hover-container {
     position: relative;
@@ -755,24 +759,12 @@ body {
     transform : rotateY(0);
 }
 
+.fourth,
+.third,
+.second,
 .first {
-    width : 691px;
-    height : 350px;
-}
-
-.second {
-    width: 488px;
-    height: 350px;
-}
-
-.third {
-    width: 386px;
-    height: 482px;
-}
-
-.fourth {
-    width: 793px;
-    height: 482px;
+    width : 590px;
+    height : 590px;
 }
 
 footer {
@@ -979,22 +971,7 @@ footer {
     .text-box:hover:after {
         height: 29px;
     }
-
-    .first,
-    .first > img {
-        height: 400px;
-    }
-
-    .one {
-        width: 100%;
-    }
-
-    .second,
-    .second > img {
-        width: 463px;
-        height: 325px;
-    }
-
+    
     .buisness > span {
         display: block;
         margin-bottom: 10px;
@@ -1002,6 +979,18 @@ footer {
 
     .buisness {
         margin-bottom: 30px;
+    }
+
+    .place-content {
+        justify-content: center;
+    }
+
+    .first,
+    .second,
+    .third,
+    .fourth {
+        width: 430px;
+        height: 430px;
     }
 }
 
@@ -1036,6 +1025,11 @@ footer {
 
     .line2 {
         width: 450px;
+    }
+
+    .place-right,
+    .place-left {
+        margin: 30px 0;
     }
 }
 
