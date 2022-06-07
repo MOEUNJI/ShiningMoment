@@ -45,7 +45,7 @@ const slider1 = document.querySelector('.slider1');
     for (let i = 0 ; i < slideButtons.length ; i ++ ){
     // i = 0 i가 dot 으로 사용할 text의 개수보다 작으면 i는 dot 의 개수만큼 증감식 실행
         slideButtons[i].addEventListener('click', ()=> {
-        // 닷으로 사용할 i 번째의 텍스트를 클릭하면
+        // 버튼으로 사용할 i 번째의 텍스트를 클릭하면
 
             for (let j = 0 ; j < slideButtons.length ; j ++){
                 slideButtons[j].classList.remove('selected');
