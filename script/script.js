@@ -166,21 +166,21 @@ for (let i = 0; i < controller.length; i++) {
         let startX, scrollLeft;
             
         slider.addEventListener('mousedown', (e) => {
+            // 마우스를 누른 상태일 때 
           isMouseDown = true;
-          slider.classList.add('active');
         
           startX = e.pageX - slider.offsetLeft;
           scrollLeft = slider.scrollLeft;
         });
+
         
         slider.addEventListener('mouseleave', () => {
           isMouseDown = false;
-          slider.classList.remove('active');
+        //   
         });
         
         slider.addEventListener('mouseup', () => {
           isMouseDown = false;
-          slider.classList.remove('active');
         });
     
         slider.addEventListener('mousemove', (e) => {
