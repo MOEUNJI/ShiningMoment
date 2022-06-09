@@ -21,6 +21,17 @@ body {
     --white-text-color: #fdfdfd;
 }
 
+.hidden-text {
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+    top: 50%;
+    position: absolute;
+}
+
 .main-slider {
     width: 100%;
 }
@@ -196,6 +207,7 @@ body {
     transition: 0.4s;
     font-family: 'Nanum Myeongjo';
     font-weight: 600;
+    position: relative;
 }
 
 .controller1 li > .Photographer-btn {
@@ -398,6 +410,7 @@ body {
     margin: 15px 0 15px 0;
     font-family: 'Nanum Myeongjo';
     font-weight: 600;
+    position: relative;
 }
 
 .keword-sub-text {
@@ -839,6 +852,10 @@ footer {
     font-family: 'Noto Sans KR';
     font-weight: 400;
 }
+
+.sns-icon > a {
+    position: relative;
+} 
 
 .to-bottom{
     transform: translateY(200px);  
