@@ -411,6 +411,7 @@ body {
     font-family: 'Nanum Myeongjo';
     font-weight: 600;
     position: relative;
+    cursor: pointer;
 }
 
 .keword-sub-text {
@@ -750,7 +751,6 @@ body {
 .hover .front {
     position: absolute; left: 0; top: 0;
     transform : rotateY(0deg);
-    cursor : pointer;
     z-index: 10;
     transition : transform 1s;
     backface-visibility : hidden;
@@ -759,7 +759,6 @@ body {
 .hover .back {
     position: absolute; left: 0; top: 0;
     transform : rotateY(-180deg);
-    cursor : pointer;
     transition : transform 1s;
     backface-visibility : hidden;
 }
