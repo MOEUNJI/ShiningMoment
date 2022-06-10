@@ -948,6 +948,7 @@ footer {
 
     .nopay-container {
         height: 900px;
+        overflow: hidden;
     }
 
     .nopay-title {
@@ -1046,8 +1047,81 @@ footer {
         padding: 0 16px;
     }
 
+    .controller1 li > .expert-button,
+    .expert-explanation,
+    .sub-text,
+    .place-text-en-small {
+        font-size: 14px;
+    }
+
+    .btn-box > li {
+        text-align: center;
+    }
+
+    .keword {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .slider-content,
+    .img-box,
+    .img-box > li,
+    .img-box > li > img {
+        height: 350px;
+    }
+
+    .img-box>li>img {
+        object-fit: contain;
+    }
+
+    .ob-cen {
+        object-position: 30%;
+    }
+
+    .slider-box,
+    .box,
+    .keword-content-all {
+        height: 700px;
+    }
+
+    .keword-btn:before,
+    .keword-btn::after {
+        display: none;
+    }
+
+    .line2 {
+        width: 100%;
+        padding: 0 16px;
+    }
+
     .slider-main-text > h2 {
         font-size: 32px;
+    }
+
+    .nopay-small-title {
+        width: 75px;
+    }
+
+    .text-box {
+        margin-left: 25px;
+    }
+
+    .first,
+    .second,
+    .third,
+    .fourth {
+        width: 300px;
+        height: 300px;
+    }
+
+    .place-text {
+        font-size: 18px;
+    }
+
+    .place-text-small {
+        font-size: 14px;
     }
 
     .expert-li {
@@ -1096,6 +1170,15 @@ footer {
 
     .all-footer {
         display: block;
+    }
+
+    .footer-menu {
+        width: 300px;
+        flex-wrap: wrap;
+    }
+
+    .first-footer-menu {
+        margin-bottom: 15px;
     }
 
     footer{
