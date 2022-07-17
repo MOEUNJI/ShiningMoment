@@ -419,7 +419,7 @@ body {
     font-weight: 400;
 }
 
-.keword-btn:before {
+.keword-btn::before {
     content: '';
     display: block;
     clear: both;
@@ -430,7 +430,7 @@ body {
     transform: translateY(50px);
 }
 
-.keword-btn:after {
+.keword-btn::after {
     content: '';
     display: block;
     clear: both;
@@ -454,12 +454,12 @@ body {
     margin-left: 10px;
 }
 
-.keword-btn:hover:before {
+.keword-btn:hover::before {
     width: 67px;
     transform: translateY(-4px);
 }
 
-.keword-btn:hover:after {
+.keword-btn:hover::after {
     height: 50px;
 }
 
@@ -542,7 +542,7 @@ body {
     height: 40px;
 }
 
-.text-box:before {
+.text-box::before {
     content: '';
     display: block;
     clear: both;
@@ -553,7 +553,7 @@ body {
     transform: translateY(50px);
 }
 
-.text-box:after {
+.text-box::after {
     content: '';
     display: block;
     clear: both;
@@ -564,12 +564,12 @@ body {
     transition: 0.3s;
 }
 
-.text-box:hover:before {
+.text-box:hover::before {
     width: 67px;
     transform: translateY(-5px);
 }
 
-.text-box:hover:after {
+.text-box:hover::after {
     height: 40px;
 }
 
@@ -598,8 +598,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -975,17 +975,17 @@ footer {
         font-size: 35px;
     }
 
-    .text-box:hover:before,
-    .keword-btn:hover:before {
+    .text-box:hover::before,
+    .keword-btn:hover::before {
         width: 50px;
         transform: translateY(-5px);
     }
     
-    .keword-btn:hover:after {
+    .keword-btn:hover::after {
         height: 33px;
     }
     
-    .text-box:hover:after {
+    .text-box:hover::after {
         height: 29px;
     }
     
@@ -1102,7 +1102,7 @@ footer {
         height: 700px;
     }
 
-    .keword-btn:before,
+    .keword-btn::before,
     .keword-btn::after {
         display: none;
     }
